@@ -125,7 +125,7 @@ fi
 
 if [ "${HELM_ACTION}" == "install" ]; then
     # Upgrade or install the chart.  This does it all.
-    HELM_COMMAND="helm upgrade --install --create-namespace --timeout ${TIMEOUT}  ${HELM_AUTH}"
+    HELM_COMMAND="helm upgrade --install --create-namespace --timeout ${TIMEOUT}  ${HELM_AUTH} --debug"
 
     # If we should wait, then do so
     if [ -n "${HELM_WAIT}" ]; then
